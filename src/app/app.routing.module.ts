@@ -7,18 +7,24 @@ import { ThreeComponent } from './three.component/three.component';
 import { TwoComponent } from './two.component/two.component';
 
 const routes: Routes = [
-  { path: 'one', component: OneComponent, 
+  {
+    path: 'one',
+    component: OneComponent,
     children: [
       {
         path: 'childa', // child route path
         component: HelloComponent, // child route component that the router renders
       },
     ],
-    },
-    { path: 'two', component: TwoComponent },
-    { path: 'three', component: ThreeComponent },
-    { path: '**', component: Error_Component },
-  ];
+  },
+
+  { path: 'two/:id', component: TwoComponent },
+  { path: 'three/:id', component: TwoComponent },
+
+  { path: 'two', component: TwoComponent },
+  { path: 'three', component: ThreeComponent },
+  { path: '**', component: Error_Component },
+];
 
 // configures NgModule imports and exports
 @NgModule({
