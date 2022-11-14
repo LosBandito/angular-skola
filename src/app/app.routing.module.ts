@@ -13,10 +13,6 @@ const routes: Routes = [
         path: 'childa', // child route path
         component: HelloComponent, // child route component that the router renders
       },
-      {
-        path: 'childb',
-        component: TwoComponent, // another child route component that the router renders
-      },
     ],
     },
     { path: 'two', component: TwoComponent },
